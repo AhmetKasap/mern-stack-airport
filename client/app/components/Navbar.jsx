@@ -1,11 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
-import { IoAirplaneOutline } from "react-icons/io5";
 import { RiCompassDiscoverLine } from "react-icons/ri";
 import { PiArrowCircleUpLeftLight } from "react-icons/pi";
 import { FaUserCircle } from "react-icons/fa";
-import { FaPlane } from "react-icons/fa6";
-import { CiPlane } from "react-icons/ci";
 import { IoIosAirplane } from "react-icons/io";
 
 
@@ -22,6 +19,8 @@ const Navbar = () => {
           <div className='flex items-center gap-2'>
             <IoIosAirplane  className='bg-purple-900 rounded-full text-2xl text-white' />
             <Link href="/" className=' roboto-slab-medium'>PLANE SCAPE</Link>
+            <Link href="/my-flights">My Flights</Link>
+
           </div>
         </div>
 
@@ -42,7 +41,6 @@ const Navbar = () => {
 
       </div>
 
-      <Link href="/my-flights">My Flights</Link>
     </>
   )
 }
