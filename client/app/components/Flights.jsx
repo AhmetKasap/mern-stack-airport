@@ -13,7 +13,7 @@ const Flights = ({ props }) => {
             <div className='flex gap-8 mt-8'>
                 {/*listelenen uçuşları göster ve reservasyon yap. */}
                 <div className=' w-2/3 '>
-                    <div className='border rounded-lg  bg-white  p-8 mt-4 '>
+                    <div className='border outline-none bordew rounded-lg  bg-white  p-8 mt-4 '>
                         <h1 className='text-sm font-medium'>Milano - Madrid</h1>
 
                         <div className='flex '>
@@ -61,9 +61,10 @@ const Flights = ({ props }) => {
 
                     <select className='border w-full mb-4 text-sm p-2 rounded-lg'>
                         <option>Lowest Price</option>
+                        <option>Highest Price</option>
                     </select>
                     
-                    <h1 className='text-md font-bold mb-2'>Arrival Time</h1>
+                    <h1 className='text-md font-bold mb-2 mt-2'>Arrival Time</h1>
                     <div>
                         <input className='border bg-purple-900' type='radio' name="time"/> 
                         <span className='ml-2 text-sm'>5:00 AM - 11.59</span> 
@@ -71,6 +72,35 @@ const Flights = ({ props }) => {
                     <div>
                         <input className='border bg-purple-900' type='radio' name="time"/> 
                         <span className='ml-2 text-sm'>5:00 AM - 11.59</span> 
+                    </div>
+
+                    <h1 className='text-md font-bold mb-2 mt-4'>Stops</h1>
+                    <div className='flex mb-2'>
+                        <input className='border bg-purple-900' type='radio' /> 
+                        <span className='ml-2 text-sm'>Non Stop</span> 
+                        <span className='text-sm ml-auto'>$230</span> 
+                    </div>
+                    <div className='flex mb-2'>
+                        <input className='border bg-purple-900' type='radio' /> 
+                        <span className='ml-2 text-sm'>Non Stop</span> 
+                        <span className='text-sm ml-auto'>$230</span> 
+                    </div>
+                    <div className='flex mb-2'>
+                        <input className='border bg-purple-900' type='radio' /> 
+                        <span className='ml-2 text-sm'>Non Stop</span> 
+                        <span className='text-sm ml-auto'>$230</span> 
+                    </div>
+
+                    <h1 className='text-md font-bold mb-2 mt-4'>Airlines Included</h1>
+                    <div className='flex mt-2'>
+                        <input className='border bg-purple-900' type='radio' /> 
+                        <span className='ml-2 text-sm'>Alitalia</span> 
+                        <span className='text-sm ml-auto'>$230</span> 
+                    </div>
+                    <div className='flex mt-2'>
+                        <input className='border bg-purple-900' type='radio' /> 
+                        <span className='ml-2 text-sm'>Lufthansa</span> 
+                        <span className='text-sm ml-auto'>$230</span> 
                     </div>
 
                   
