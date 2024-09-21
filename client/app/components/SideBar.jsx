@@ -8,9 +8,6 @@ const SideBar = () => {
         <Image className='border rounded-xl' width={500} height={500} src="/img/side-bar-1.jpg"></Image>
         <Image className='border rounded-xl' width={500} height={300} src="/img/side-bar-2.jpg"></Image>
         <Image className='border rounded-xl' width={500} height={300} src="/img/side-bar-3.jpg"></Image>
-
-
-        
       </div>
 
     </>
