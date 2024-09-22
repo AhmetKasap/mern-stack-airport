@@ -1,5 +1,7 @@
+'use client'
+
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import { RiCompassDiscoverLine } from "react-icons/ri";
 import { PiArrowCircleUpLeftLight } from "react-icons/pi";
 import { FaUserCircle } from "react-icons/fa";
@@ -7,11 +9,10 @@ import { IoIosAirplane } from "react-icons/io";
 
 
 
-
-
-
-
 const Navbar = () => {
+  const [token, setToken] = useState()
+  const [username, setUsername] = useState()
+
   return (
     <>
       <div className='flex mt-6 mb-8'>
@@ -33,7 +34,19 @@ const Navbar = () => {
           </div>
           <div className='flex gap-1 items-center'>
           <FaUserCircle  className='text-xl bg-purple-900 text-white rounded-full'  />
-            <Link href="/profile" className='content font-medium'>Profile</Link>
+            {
+              token ? (
+                <Link href="/my-flights" className='content font-medium'>
+              {username}
+            </Link>
+
+              ) : (
+                <Link href="/auth" className='content font-medium'>
+                  Login / Register
+                </Link>
+              )
+            }
+            
           </div>
         </div>
 
