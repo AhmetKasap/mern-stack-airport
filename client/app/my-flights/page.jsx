@@ -1,8 +1,16 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
+import Score from './components/Score'
+import MyFlights from './components/MyFlights'
 
 const page = () => {
   return (
-    <div>page</div>
+    <>  
+      <div className='w-11/12 mx-auto mt-8'>
+        <Score></Score>
+        <MyFlights></MyFlights>
+      </div>
+    </>
   )
 }
 
