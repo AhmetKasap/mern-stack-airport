@@ -14,28 +14,26 @@ import { IoIosAirplane } from "react-icons/io";
 const Navbar = () => {
   return (
     <>
-      <div className='flex mt-6 mb-6'>
+      <div className='flex mt-6 mb-8'>
         <div className='flex w-1/2 '>
           <div className='flex items-center gap-2'>
             <IoIosAirplane  className='bg-purple-900 rounded-full text-2xl text-white' />
-            <Link href="/" className=' roboto-slab-medium'>PLANE SCAPE</Link>
-            <Link href="/my-flights">My Flights</Link>
-
+            <Link href="/" className='title text-xl'>PLANE SCAPE</Link>
           </div>
         </div>
 
         <div className='flex justify-end w-1/2  gap-4'>
           <div className='flex items-center gap-1'>
             <PiArrowCircleUpLeftLight className='text-xl bg-purple-900 text-white rounded-full'/>
-            <Link href="/deals">Deals</Link>
+            <Link href="/deals" className='content font-medium'>Deals</Link>
           </div>
           <div className='flex items-center gap-1'>
             <RiCompassDiscoverLine className='text-xl bg-purple-900 text-white rounded-full' />
-            <Link href="/discover">Discover</Link>
+            <Link href="/discover" className='content font-medium'>Discover</Link>
           </div>
           <div className='flex gap-1 items-center'>
           <FaUserCircle  className='text-xl bg-purple-900 text-white rounded-full'  />
-            <Link href="/profile">Profile</Link>
+            <Link href="/profile" className='content font-medium'>Profile</Link>
           </div>
         </div>
 

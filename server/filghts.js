@@ -1,8 +1,8 @@
 const flights = [
   {
     id: 1,
-    departure: '2024-09-21',
-    arrival: '2024-09-21',
+    departure: '2024-09-22',
+    arrival: '2024-09-22',
     departureTime: '12:15',
     arrivalTime: '14:40',
     totalTime: '2h 25m',
@@ -19,7 +19,7 @@ const flights = [
     stops: 'Nonstop',
     date: '2024-09-21',
     airline: "American Airlines",
-    price: 200
+    price: 100
   },
   {
     id: 2,
@@ -218,6 +218,28 @@ const flights = [
     date: '2024-09-30',
     airline: "Emirates",
     price: 400
-  }
+  },
+  {
+    id: 11,
+    departure: '2024-09-22',
+    arrival: '2024-09-22',
+    departureTime: '13:15',
+    arrivalTime: '14:40',
+    totalTime: '2h 25m',
+    from: {
+      code: 'MXP',
+      name: 'Milano Malpensa Airport, İtalya',
+      city: 'Milano'
+    },
+    to: {
+      code: 'MAD',
+      name: 'Madrid-Barajas Airport, İspanya',
+      city: 'Madrid'
+    },
+    stops: 'Nonstop',
+    date: '2024-09-21',
+    airline: "American Airlines",
+    price: 220
+  },
 ]
 module.exports = flights

@@ -111,24 +111,24 @@ const FlightBooking = () => {
 
   return (
     <>
-      <div className='shadow-xl border rounded-md p-2 bg-white'>
-        <div className='flex items-center justify-between mb-4'>
+      <div className='shadow-xl border rounded-md p-6 bg-white'>
+        <div className='flex items-center justify-between mb-6'>
 
           <div className='flex items-center gap-1'>
-            <IoIosAirplane className='bg-purple-900 rounded-full text-2xl text-white' />
-            <h5>BOOK YOUR FLIGHT</h5>
+            <IoIosAirplane className=' rounded-full text-2xl text-bold' />
+            <h5 className='title '>BOOK YOUR FLIGHT</h5>
           </div>
 
           {
             checkButton ? (
               <div className='outline-none'>
-                <button className='bg-purple-900 p-2 text-sm text-white hover:bg-purple-600 rounded-s-2xl'>Round trip</button>
-                <button onClick={() => clicked()} className='bg-slate-200 p-2 text-sm text-purple-700 rounded-e-2xl'>One way</button>
+                <button className='bg-purple-900 p-2 text-sm text-white hover:bg-purple-600 rounded-s-2xl content'>Round trip</button>
+                <button onClick={() => clicked()} className='bg-slate-200 p-2 text-sm content text-purple-700 rounded-e-2xl'>One way</button>
               </div>
             ) : (
               <div className='  outline-none'>
-                <button onClick={() => clicked()} className='bg-slate-200 p-2 text-sm text-purple-700 rounded-s-2xl'>Round trip</button>
-                <button className='bg-purple-900 p-2 text-sm text-white hover:bg-purple-600 rounded-e-2xl'>One way</button>
+                <button onClick={() => clicked()} className='bg-slate-200 p-2 text-sm text-purple-700 rounded-s-2xl content'>Round trip</button>
+                <button className='bg-purple-900 p-2 text-sm text-white hover:bg-purple-600 rounded-e-2xl content'>One way</button>
               </div>
             )
           }
@@ -145,7 +145,7 @@ const FlightBooking = () => {
               </div>
               <input
                 type="text"
-                className="w-full p-2 pl-10 border-2 outline-none rounded-s-2xl"
+                className="w-full p-2 pl-10 border-2 outline-none rounded-s-2xl text-sm"
                 placeholder="Departure"
                 value={departure}
                 onChange={(e) => setDeparture(e.target.value)}
@@ -177,7 +177,7 @@ const FlightBooking = () => {
               </div>
               <input
                 type="text"
-                className="w-full p-2 pl-10 border-2 outline-none rounded-e-2xl"
+                className="w-full p-2 pl-10 border-2 outline-none rounded-e-2xl text-sm"
                 placeholder="Arrival"
                 value={arrival}
                 onChange={(e) => setArrival(e.target.value)}
@@ -231,8 +231,8 @@ const FlightBooking = () => {
 
         </div>
 
-        <div className='mt-4'>
-          <button onClick={() => showFlights()} className='bg-purple-900 rounded-md border text-sm   outline-none border-purple-900  text-white hover:bg-purple-600 p-3'>Show Flights</button>
+        <div className='mt-7'>
+          <button onClick={() => showFlights()} className='bg-purple-900 rounded-md border text-sm  content  outline-none border-purple-900  text-white hover:bg-purple-600 p-3'>Show Flights</button>
         </div>
 
       </div>

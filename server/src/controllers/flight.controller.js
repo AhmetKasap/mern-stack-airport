@@ -26,7 +26,6 @@ const showFlights = async(req,res ) => {
             return flight
         }
     })
-    console.log(foundFlights)
     if(foundFlights.length>0) return res.status(200).json(foundFlights)
     else return res.status(404).json("data not found")
 }

@@ -5,7 +5,7 @@ import SideBar from "./components/SideBar";
 export default function Home() {
   return (
     <>
-      <div className="w-11/12 mx-auto  ">
+      <div className="w-11/12 mx-auto  bg-white">
         <Navbar></Navbar>
         <div className="flex flex-row gap-8">
           <div className="w-3/4">
