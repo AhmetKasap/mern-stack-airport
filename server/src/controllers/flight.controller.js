@@ -36,13 +36,10 @@ const getCities = async(req,res) => {
     return res.status(200).json(data)
 }
 
-const filterFlights = async( ) => {
-    
-}
+
 
 
 module.exports = {
     showFlights,
-    filterFlights,
     getCities
 }
