@@ -1,3 +1,8 @@
+Frontend : React.js, Next.js, Tailwind CSS
+
+Backend : Nodej.s, Express.js, MongoDB
+
+
 TO RUN THE CLIENT ;
 
 + cd client
