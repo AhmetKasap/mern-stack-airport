@@ -20,14 +20,16 @@ const Flights = ({ props }) => {
     const [times, setTimes] = useState()
     const [airlinesFilter, setAirlinesFilter] = useState()
     const [filters, setFilters] = useState()
+
+    console.log("priceFilter", priceFilter)
     useEffect(() => {
         const allFilters = async () => {
             let filtered = props && props.data
 
             if (priceFilter === "lowest") {
-                filtered = filtered.sort((a, b) => a.price - b.price)
-            } else if (priceFilter === "highset") {
                 filtered = filtered.sort((a, b) => b.price - a.price)
+            } else if (priceFilter === "highset") {
+                filtered = filtered.sort((a, b) => a.price - b.price)
             }
 
             if (stopFilter) filtered = filtered.filter(flight => flight.stops === stopFilter)
@@ -83,9 +85,9 @@ const Flights = ({ props }) => {
     return (
         <>
         <ToastContainer />
-            <div className='flex gap-8 mt-8'>
+            <div className='sm:flex sm:flex-col md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row gap-8 mt-8'>
                 {/*listelenen uçuşları göster ve reservasyon yap. */}
-                <div className=' w-2/3  '>
+                <div className='sm:w-full md:w-2/3 lg:w-2/3 xl:w-2/3  '>
                     {
 
                         data && data.map(flight => {
@@ -159,7 +161,7 @@ const Flights = ({ props }) => {
                 {
                     props ? (
 
-                        <div className='w-1/3 bg-white '>
+                        <div className='sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3 bg-white mb-8'>
                             <h1 className='text-md font-bold mb-2'>Sort by :</h1>
 
                             <select

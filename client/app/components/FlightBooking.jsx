@@ -112,7 +112,7 @@ const FlightBooking = () => {
   return (
     <>
       <div className='shadow-xl border rounded-md p-6 bg-white'>
-        <div className='flex items-center justify-between mb-6'>
+        <div className='flex items-center justify-between mb-6 '>
 
           <div className='flex items-center gap-1'>
             <IoIosAirplane className=' rounded-full text-2xl text-bold' />

@@ -3,14 +3,16 @@ import React from 'react'
 
 import { RiStarSLine } from "react-icons/ri";
 const stars = new Array(6).fill(null)
+const starsFor = new Array(5).fill(null)
+
 
 
 const Score = () => {
   return (
     <>
 
-      <div className='flex items-center justify-between pl-8 pr-8'>
-        <div className='flex gap-6 items-center w-1/2'>
+      <div className='sm:flex sm:flex-col  md:flex md:flex-col lg:flex lg:flex-row xl:flex xl:flew-row items-center justify-between '>
+        <div className='flex gap-2 items-center sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2'>
           <div className='border rounded-md p-1 pl-4 pr-4 text-center text-sm content'>
             Times
           </div>
@@ -27,14 +29,14 @@ const Score = () => {
             Amenities
           </div>
           <Link href="" className='font text-blue-500 text-sm'>
-            Edit Search
+            Edit 
           </Link>
 
         </div>
 
-        <div className='flex gap-6'>
+        <div className='flex gap-10 mt-2'>
           {
-            stars.map((_, index)=> {
+            starsFor.map((_, index)=> {
               return(
                 <div key={index} className='flex w-12 flex-wrap '>
           
