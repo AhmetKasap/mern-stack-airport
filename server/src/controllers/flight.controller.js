@@ -31,7 +31,6 @@ const showFlights = async(req,res ) => {
 }
 
 const getCities = async(req,res) => {
-    console.log(cities)
     const data = cities.map(data => data)
     return res.status(200).json(data)
 }
