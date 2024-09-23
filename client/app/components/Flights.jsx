@@ -3,11 +3,15 @@ import React, { useEffect, useState } from 'react'
 import { TbPlaneDeparture } from "react-icons/tb";
 import { LiaPlaneArrivalSolid } from "react-icons/lia";
 import { TbPlaneInflight } from "react-icons/tb";
+import Cookies from 'js-cookie';
 
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 
 const Flights = ({ props }) => {
+    const notify = (message) => toast(message)
 
     const [priceFilter, setPriceFilter] = useState()
     const [stopFilter, setStopFilter] = useState()
@@ -35,17 +39,30 @@ const Flights = ({ props }) => {
     }, [priceFilter, stopFilter, airlinesFilter])
 
 
-    const [data,setData] = useState()
+    const [data, setData] = useState()
     useEffect(() => {
 
-        if(filters === undefined) setData(props && props.data)
+        if (filters === undefined) setData(props && props.data)
         else setData(filters)
 
-    },[filters,props])
-  
+    }, [filters, props])
+
+
+    const [token, setToken] = useState()
+    const bookFlight = async(flight) => {
+        setToken(Cookies.get('token'))
+
+        if(!token) toast('please login')
+        
+        const response = await axios.post()
+    }
+
+
+
 
     return (
         <>
+        <ToastContainer />
             <div className='flex gap-8 mt-8'>
                 {/*listelenen uçuşları göster ve reservasyon yap. */}
                 <div className=' w-2/3  '>
@@ -98,8 +115,15 @@ const Flights = ({ props }) => {
                                         </div>
 
                                         <div className='flex -m-8  justify-end '>
-                                            <button className='border pl-8 pr-8 p-4 rounded-l-xl text-white bg-purple-900 text-sm'>Book Flight</button>
+                                            <button onClick={() => bookFlight(flight)} className='border pl-8 pr-8 p-4 rounded-l-xl text-white bg-purple-900 text-sm'>Book Flight</button>
                                         </div>
+
+
+
+                                       
+
+
+
 
                                     </div>
                                     <button className='p-3 underline underline-offset-1 bg-gray-200 text-purple-900 text-sm rounded-b-lg'>Check the details</button></>
