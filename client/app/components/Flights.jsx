@@ -8,10 +8,12 @@ import Cookies from 'js-cookie';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
+import { useRouter } from 'next/navigation';
 
 
 const Flights = ({ props }) => {
     const notify = (message) => toast(message)
+    const router = useRouter()
 
     const [priceFilter, setPriceFilter] = useState()
     const [stopFilter, setStopFilter] = useState()
@@ -48,13 +50,31 @@ const Flights = ({ props }) => {
     }, [filters, props])
 
 
-    const [token, setToken] = useState()
+    
     const bookFlight = async(flight) => {
-        setToken(Cookies.get('token'))
+        const token = Cookies.get('token')
 
         if(!token) toast('please login')
+            
+        try {
+            const response = await axios.post(`http://localhost:5001/api/v1/reservation`, flight, {
+                headers : {Authorization : `Bearer ${token}`}
+            })
+            console.log(response.data)
+            if(response.data.success === true) {
+                toast('reservation successfully created')
+                router.push('/my-flights')
+
+            }
+            else {
+
+            }
+
+            
+        } catch (error) {
+            
+        }
         
-        const response = await axios.post()
     }
 
 
