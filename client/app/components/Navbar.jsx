@@ -1,17 +1,27 @@
 'use client'
 
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { RiCompassDiscoverLine } from "react-icons/ri";
 import { PiArrowCircleUpLeftLight } from "react-icons/pi";
 import { FaUserCircle } from "react-icons/fa";
 import { IoIosAirplane } from "react-icons/io";
+import Cookies from 'js-cookie';
 
 
 
 const Navbar = () => {
-  const [token, setToken] = useState()
+  
   const [username, setUsername] = useState()
+  const [token, setToken] = useState()
+
+  useEffect(() => {
+    setToken(Cookies.get('token'))
+    setUsername(Cookies.get('username'))
+  },[])
+ 
+
+  
 
   return (
     <>

@@ -6,6 +6,7 @@ import { BsTriangleHalf } from "react-icons/bs";
 const MyFlights = () => {
     return (
         <>
+            
             <div className='flex justify-between mt-8'>
                 <div className='content'>Sort By : <b className='font-medium'>Recommended </b> </div>
                 <div className='flex items-center justify-center gap-2'>

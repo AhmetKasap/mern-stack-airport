@@ -20,7 +20,8 @@ const register = async (req,res) => {
         email : user.email, 
         password : password
     })
-    await newUser.save()
+    const result = await newUser.save()
+    if(result) return new Response(null, 'user registiration succesfully').created(res)
 
 }
 

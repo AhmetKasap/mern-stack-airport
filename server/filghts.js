@@ -1,8 +1,8 @@
 const flights = [
   {
     id: 1,
-    departure: '2024-09-22',
-    arrival: '2024-09-22',
+    departure: '2024-09-25',
+    arrival: '2024-09-25',
     departureTime: '12:15',
     arrivalTime: '14:40',
     totalTime: '2h 25m',
@@ -221,8 +221,8 @@ const flights = [
   },
   {
     id: 11,
-    departure: '2024-09-22',
-    arrival: '2024-09-22',
+    departure: '2024-09-25',
+    arrival: '2024-09-25',
     departureTime: '13:15',
     arrivalTime: '14:40',
     totalTime: '2h 25m',
